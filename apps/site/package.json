@@ -1,24 +1,25 @@
 {
-  "name": "docs",
+  "name": "site",
   "version": "0.0.0",
   "private": true,
+  "sideEffects": false,
   "scripts": {
-    "dev": "next dev --port 3001",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "eslint-config-custom": "workspace:*",
+    "@cid/eslint-config": "workspace:*",
     "eslint": "7.32.0",
-    "tsconfig": "workspace:*",
+    "@cid/ts-config": "workspace:*",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
