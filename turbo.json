@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -8,12 +9,23 @@
     "typecheck": {
       "outputs": []
     },
-    "lint": {
-      "dependsOn": ["typecheck"],
+    "db:migrate:deploy": {
+      "outputs": []
+    },
+    "db:push": {
+      "outputs": []
+    },
+    "db:seed": {
       "outputs": []
     },
     "dev": {
       "cache": false
+    },
+    "generate": {
+      "dependsOn": ["^generate"]
+    },
+    "lint": {
+      "outputs": []
     }
   }
 }

@@ -1,4 +1,9 @@
 import { useEffect, useState } from "react";
+import { PrismaClient } from "@prisma/client";
+
+export async function loader() {
+  const prisma = new PrismaClient();
+}
 
 export default function Index() {
   const [hey] = useState("");
