@@ -2,15 +2,9 @@
   "name": "@cid/server",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist/**"
-  ],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
@@ -18,17 +12,13 @@
     "format": "prisma format",
     "generate": "prisma generate",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src --fix",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate"
+    "lint": "eslint src --fix"
   },
   "devDependencies": {
     "@cid/eslint-config": "workspace:*",
     "@cid/ts-config": "workspace:*",
     "@types/node": "^17.0.45",
-    "eslint": "7.32.0",
     "prisma": "^4.5.0",
-    "tsup": "^6.4.0",
     "typescript": "^4.8.4"
   },
   "dependencies": {

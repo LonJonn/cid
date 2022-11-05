@@ -1,11 +1,15 @@
+import { json } from "@remix-run/node";
 import { useEffect, useState } from "react";
-import { PrismaClient } from "@prisma/client";
+import { useLoaderData } from "@remix-run/react";
+import { getAllPosts, prisma } from "@cid/server";
 
 export async function loader() {
-  const prisma = new PrismaClient();
+  return json(await getAllPosts());
 }
 
 export default function Index() {
+  const posts = useLoaderData<typeof loader>();
+
   const [hey] = useState("");
   useEffect(() => {
     console.log(hey);
@@ -14,6 +18,7 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
+      <pre>{JSON.stringify(posts, null, 2)}</pre>
       <ul>
         <li>
           <a target="_blank" href="https://remix.run/tutorials/blog" rel="noreferrer">

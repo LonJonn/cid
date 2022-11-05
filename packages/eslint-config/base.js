@@ -2,8 +2,30 @@
 module.exports = {
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
-      extends: ["airbnb", "airbnb-typescript", "prettier"],
+      files: ["*.ts", ".tsx"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: ["../../apps/*/tsconfig.json", "../../packages/*/tsconfig.json"],
+      },
+      plugins: ["@typescript-eslint", "import"],
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "prettier",
+      ],
+      settings: {
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"],
+        },
+        "import/resolver": {
+          typescript: {
+            project: ["tsconfig.json"],
+          },
+        },
+      },
       rules: {
         "@typescript-eslint/consistent-type-imports": "warn",
 
@@ -17,20 +39,10 @@ module.exports = {
             },
           },
         ],
-
-        "no-restricted-exports": "off",
-        "@typescript-eslint/no-shadow": "off",
-        "@typescript-eslint/no-throw-literal": "off", // we want to be able to throw objects
-        "@typescript-eslint/no-use-before-define": "off",
-
-        // Dumb rules here
-        "@typescript-eslint/naming-convention": "off",
-        "no-underscore-dangle": "off",
-        "arrow-body-style": "off",
       },
     },
     {
-      files: ["*.spec.ts", "*.test.ts", "**/mocks/**/*.ts"],
+      files: ["*.config.ts", "*.spec.ts", "*.test.ts", "**/mocks/**/*.ts"],
       rules: {
         // These are helpful in playwright tests
         "no-await-in-loop": "off",

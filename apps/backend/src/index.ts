@@ -1,8 +1,8 @@
 import { getPost, prisma } from "@cid/server";
 
-(async () => {
+void (async () => {
   const posts = await getPost(1);
-  console.log({ posts, woah: "HEY" });
+  console.log({ posts, woah: "HEY THERE" });
 
   await prisma.$disconnect();
 })();
