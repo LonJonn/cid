@@ -41,15 +41,5 @@ module.exports = {
         ],
       },
     },
-    {
-      files: ["*.config.ts", "*.spec.ts", "*.test.ts", "**/mocks/**/*.ts"],
-      rules: {
-        // These are helpful in playwright tests
-        "no-await-in-loop": "off",
-        "no-restricted-syntax": "off",
-
-        "import/no-extraneous-dependencies": "off",
-      },
-    },
   ],
 };
