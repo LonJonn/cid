@@ -2,10 +2,10 @@
 module.exports = {
   overrides: [
     {
-      files: ["*.ts", ".tsx"],
+      files: ["*.ts?(x)"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: ["../../apps/*/tsconfig.json", "../../packages/*/tsconfig.json"],
+        project: ["tsconfig.json"],
       },
       plugins: ["@typescript-eslint", "import"],
       extends: [
@@ -16,16 +16,6 @@ module.exports = {
         "plugin:import/typescript",
         "prettier",
       ],
-      settings: {
-        "import/parsers": {
-          "@typescript-eslint/parser": [".ts", ".tsx"],
-        },
-        "import/resolver": {
-          typescript: {
-            project: ["tsconfig.json"],
-          },
-        },
-      },
       rules: {
         "@typescript-eslint/consistent-type-imports": "warn",
 

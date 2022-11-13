@@ -23,7 +23,7 @@
   "devDependencies": {
     "@cid/eslint-config": "workspace:*",
     "prettier": "^2.7.1",
-    "tsx": "^3.11.0",
+    "tsx": "^3.12.1",
     "turbo": "latest"
   },
   "engines": {

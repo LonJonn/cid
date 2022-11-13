@@ -1,7 +1,7 @@
-import { json } from "@remix-run/node";
-import { useEffect, useState } from "react";
-import { useLoaderData } from "@remix-run/react";
 import { getAllPosts, prisma } from "@cid/server";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { useEffect, useState } from "react";
 
 export async function loader() {
   return json(await getAllPosts());
