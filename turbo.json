@@ -3,10 +3,17 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^generate", "^build"],
       "outputs": ["dist/**", ".next/**", "api/**", "public/build/**"]
     },
+    "dev": {
+      "dependsOn": ["^generate"],
+      "cache": false
+    },
     "typecheck": {
+      "outputs": []
+    },
+    "lint": {
       "outputs": []
     },
     "db:migrate:deploy": {
@@ -18,14 +25,8 @@
     "db:seed": {
       "outputs": []
     },
-    "dev": {
-      "cache": false
-    },
     "generate": {
-      "dependsOn": ["^generate"]
-    },
-    "lint": {
-      "outputs": []
+      "cache": false
     }
   }
 }
