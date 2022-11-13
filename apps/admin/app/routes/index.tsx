@@ -17,7 +17,7 @@ export default function Index() {
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+      <h1>Welcome to Remix yepjik</h1>
       <pre>{JSON.stringify(posts, null, 2)}</pre>
       <ul>
         <li>
