@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
-let z = 0;
+let zaza = 0;
 
 export async function loader() {
   return json(await getAllPosts());

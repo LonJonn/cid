@@ -7,7 +7,7 @@
     "build": "remix build",
     "dev": "remix dev",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "eslint app --fix --cache"
+    "lint": "eslint app --cache"
   },
   "dependencies": {
     "@cid/server": "workspace:^0.0.0",

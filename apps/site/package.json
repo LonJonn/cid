@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "next lint --fix"
+    "lint": "next lint"
   },
   "dependencies": {
     "@cid/server": "workspace:^0.0.0",
