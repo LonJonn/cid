@@ -4,7 +4,6 @@ import { useLoaderData } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 let x = 0;
-console.log(x);
 
 export async function loader() {
   return json(await getAllPosts());
