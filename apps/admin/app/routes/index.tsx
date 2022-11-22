@@ -12,7 +12,7 @@ export async function loader() {
 export default function Index() {
   const posts = useLoaderData<typeof loader>();
 
-  const [hey] = useState("");
+  const [hey] = useState("hey");
   useEffect(() => {
     console.log(hey);
   }, []);

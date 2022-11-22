@@ -14,7 +14,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   return {
     revalidate: 60,
     props: {
-      hey: "there",
+      hey: "there!",
       posts: await getAllPosts(),
     },
   }; // satisfies ReturnType<GetStaticProps>;
