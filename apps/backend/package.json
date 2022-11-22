@@ -15,8 +15,8 @@
     "lint": "eslint src --fix"
   },
   "devDependencies": {
-    "@cid/eslint-config": "workspace:*",
-    "@cid/ts-config": "workspace:*",
+    "@cid/eslint-config": "*",
+    "@cid/ts-config": "*",
     "@types/node": "^18.11.9",
     "eslint": "8.28.0",
     "tsup": "^6.5.0",
@@ -24,6 +24,6 @@
     "typescript": "4.8.4"
   },
   "dependencies": {
-    "@cid/server": "workspace:^0.0.0"
+    "@cid/server": "^0.0.0"
   }
 }

@@ -15,8 +15,8 @@
     "generate": "prisma generate"
   },
   "devDependencies": {
-    "@cid/eslint-config": "workspace:*",
-    "@cid/ts-config": "workspace:*",
+    "@cid/eslint-config": "*",
+    "@cid/ts-config": "*",
     "@types/node": "^18.11.9",
     "prisma": "^4.6.1",
     "typescript": "4.8.4"
