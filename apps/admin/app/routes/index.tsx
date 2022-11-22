@@ -12,7 +12,7 @@ export async function loader() {
 export default function Index() {
   const posts = useLoaderData<typeof loader>();
 
-  const [hey] = useState("test npm change");
+  const [hey] = useState("test npm change!");
   useEffect(() => {
     console.log(hey);
   }, []);
