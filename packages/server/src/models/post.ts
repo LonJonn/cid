@@ -1,6 +1,4 @@
-import type {} from "@prisma/client";
-
-import { prisma } from "../client";
+import { prisma } from "@cid/db";
 
 export async function getAllPosts() {
   return prisma.post.findMany();

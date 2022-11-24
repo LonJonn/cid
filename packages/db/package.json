@@ -1,0 +1,27 @@
+{
+  "name": "@cid/db",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:push": "prisma db push --skip-generate"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@cid/eslint-config": "workspace:*",
+    "@cid/ts-config": "workspace:*",
+    "@types/node": "^18.11.9",
+    "prisma": "4.6.1",
+    "tsx": "^3.12.1",
+    "typescript": "4.8.4"
+  },
+  "dependencies": {
+    "@prisma/client": "4.6.1"
+  }
+}

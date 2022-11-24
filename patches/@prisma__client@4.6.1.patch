@@ -1,0 +1,13 @@
+diff --git a/runtime/index.js b/runtime/index.js
+index d896c20b55e000bc8bb579daa9a9978b2218c0ea..8cacbb6f90f6e0510729257edcd2b1900ec76d87 100644
+--- a/runtime/index.js
++++ b/runtime/index.js
+@@ -35526,7 +35526,7 @@ __name(findSync, "findSync");
+ 
+ // src/runtime/warnEnvConflicts.ts
+ function warnEnvConflicts(envPaths) {
+-  tryLoadEnvs(envPaths, { conflictCheck: "warn" });
++  tryLoadEnvs(envPaths);
+ }
+ __name(warnEnvConflicts, "warnEnvConflicts");
+ 

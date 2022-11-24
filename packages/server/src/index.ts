@@ -1,2 +1,3 @@
-export * from "./client";
-export * from "./models";
+import type {} from "@prisma/client";
+
+export * from "./models/post";

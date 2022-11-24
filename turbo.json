@@ -3,31 +3,20 @@
   "globalEnv": ["NODE_ENV", "DATABASE_URL", "EVENT_STAGE", "ADMIN_LOCKED"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^generate", "^build"],
+      "dependsOn": ["@cid/db#db:generate", "^build"],
       "outputs": ["dist/**", ".next/**", "api/**", "public/build/**"]
     },
     "dev": {
-      "dependsOn": ["^generate"],
+      "dependsOn": ["@cid/db#db:generate"],
       "cache": false
     },
     "typecheck": {
-      "dependsOn": ["^generate"],
-      "outputs": []
+      "dependsOn": ["@cid/db#db:generate"]
     },
     "lint": {
-      "dependsOn": ["typecheck"],
-      "outputs": []
+      "dependsOn": ["typecheck"]
     },
-    "db:migrate:deploy": {
-      "outputs": []
-    },
-    "db:push": {
-      "outputs": []
-    },
-    "db:seed": {
-      "outputs": []
-    },
-    "generate": {
+    "db:generate": {
       "cache": false
     }
   }
