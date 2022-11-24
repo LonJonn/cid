@@ -7,4 +7,5 @@ export const publicSchema = z.object({
 
 export const secretSchema = z.object({
   DATABASE_URL: z.string().url(),
+  API_URL: z.string().url(),
 });

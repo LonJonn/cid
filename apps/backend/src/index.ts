@@ -1,6 +1,17 @@
-import { getPost } from "@cid/server";
+import * as trpcExpress from "@trpc/server/adapters/express";
+import express from "express";
 
-void (async () => {
-  const posts = await getPost(1);
-  console.log({ posts, woah: "HEY THERE" });
-})();
+import { appRouter, createContext } from "@cid/server";
+
+const app = express();
+
+app.use(
+  "/trpc",
+  trpcExpress.createExpressMiddleware({
+    router: appRouter,
+    createContext,
+  })
+);
+
+const PORT = 4000;
+app.listen(PORT, () => console.log(`Listening on port ${PORT} 🚀`));
