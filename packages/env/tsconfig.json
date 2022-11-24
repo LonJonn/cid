@@ -1,6 +1,6 @@
 {
   "extends": "@cid/ts-config/node.json",
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "check.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "dist",

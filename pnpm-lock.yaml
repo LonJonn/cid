@@ -135,6 +135,7 @@ importers:
       '@cid/eslint-config': workspace:*
       '@cid/ts-config': workspace:*
       '@types/node': ^18.11.9
+      dotenv-cli: ^6.0.0
       typescript: 4.8.4
       zod: ^3.19.1
     dependencies:
@@ -143,6 +144,7 @@ importers:
       '@cid/eslint-config': link:../eslint-config
       '@cid/ts-config': link:../ts-config
       '@types/node': 18.11.9
+      dotenv-cli: 6.0.0
       typescript: 4.8.4
 
   packages/eslint-config:
@@ -3527,6 +3529,21 @@ packages:
 
   /dom-accessibility-api/0.5.14:
     resolution: {integrity: sha512-NMt+m9zFMPZe0JcY9gN224Qvk6qLIdqex29clBvc/y75ZBX9YA9wNK3frsYvu2DI1xcCIwxwnX+TlsJ2DSOADg==}
+    dev: true
+
+  /dotenv-cli/6.0.0:
+    resolution: {integrity: sha512-qXlCOi3UMDhCWFKe0yq5sg3X+pJAz+RQDiFN38AMSbUrnY3uZshSfDJUAge951OS7J9gwLZGfsBlWRSOYz/TRg==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      dotenv: 16.0.3
+      dotenv-expand: 8.0.3
+      minimist: 1.2.7
+    dev: true
+
+  /dotenv-expand/8.0.3:
+    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
+    engines: {node: '>=12'}
     dev: true
 
   /dotenv/16.0.3:

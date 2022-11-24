@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["NODE_ENV"],
+  "globalEnv": ["NODE_ENV", "DATABASE_URL", "EVENT_STAGE", "ADMIN_LOCKED"],
   "pipeline": {
     "build": {
       "dependsOn": ["^generate", "^build"],
