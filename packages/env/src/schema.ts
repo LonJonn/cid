@@ -6,5 +6,5 @@ export const publicSchema = z.object({
 });
 
 export const secretSchema = z.object({
-  DATABASE_URL: z.string().min(1),
+  DATABASE_URL: z.string().url(),
 });
