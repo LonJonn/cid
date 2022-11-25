@@ -7,7 +7,6 @@
       "outputs": ["dist/**", ".next/**", "api/**", "public/build/**"]
     },
     "dev": {
-      "dependsOn": ["@cid/db#db:generate"],
       "cache": false
     },
     "typecheck": {
