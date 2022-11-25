@@ -1,0 +1,21 @@
+{
+  "name": "astro",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint app --cache",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^3.1.0",
+    "@cid/db": "workspace:^0.0.0",
+    "astro": "^1.6.10",
+    "dotenv": "^16.0.3"
+  }
+}

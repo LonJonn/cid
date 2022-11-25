@@ -16,4 +16,3 @@ if (!("document" in globalThis)) {
 }
 
 export { prisma };
-export * from "@prisma/client";
