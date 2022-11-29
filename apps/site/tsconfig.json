@@ -1,10 +1,14 @@
 {
-  "extends": "@cid/ts-config/nextjs.json",
+  "extends": "@cid/ts-config/node.json",
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "allowJs": true,
     "incremental": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true,
+    "jsx": "preserve",
     "plugins": [{ "name": "next" }]
   }
 }

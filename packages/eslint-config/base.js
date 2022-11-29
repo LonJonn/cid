@@ -17,8 +17,9 @@ module.exports = {
         "prettier",
       ],
       rules: {
-        "@typescript-eslint/consistent-type-imports": "warn",
+        "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/consistent-type-imports": "warn",
 
         "import/order": [
           "warn",
